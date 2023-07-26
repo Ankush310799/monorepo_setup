@@ -1,0 +1,13 @@
+py_library(
+    name = "api",
+    srcs = ["//projects/users:views.py"],
+    visibility = ["//visibility:public"]
+)
+
+py_test(
+    name = "user_test",
+    srcs = ["projects/users/tests:test_user_api.py"],
+    deps = [
+        "//projects/users:api"
+    ],
+)
